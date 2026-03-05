@@ -30,7 +30,7 @@ const MessageSchema = new mongoose.Schema({
   },
   projectType: {
     type: String,
-    enum: ['web', 'design', 'game', 'fullstack', 'other'],
+    enum: ['web', 'design', 'fullstack', 'game', 'other'],
     default: 'other'
   },
   status: {
