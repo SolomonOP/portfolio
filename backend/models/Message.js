@@ -30,13 +30,8 @@ const MessageSchema = new mongoose.Schema({
   },
   projectType: {
     type: String,
-    enum: ['web', 'design', 'game', 'consulting', 'other'],
+    enum: ['web', 'design', 'game', 'fullstack', 'other'],
     default: 'other'
-  },
-  budget: {
-    type: String,
-    enum: ['<1000', '1000-5000', '5000-10000', '10000+', 'not-specified'],
-    default: 'not-specified'
   },
   status: {
     type: String,

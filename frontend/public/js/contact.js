@@ -142,7 +142,12 @@ async function submitForm(form) {
     const budgetOption = form.querySelector('input[name="budget"]:checked');
     if (budgetOption) {
         data.budget = budgetOption.value;
+    } else {
+        data.budget = 'not-specified';
     }
+
+    // Log the data being sent (for debugging)
+    console.log('Sending to backend:', JSON.stringify(data, null, 2));
 
     try {
         // Make actual API call to your backend
@@ -154,10 +159,27 @@ async function submitForm(form) {
             body: JSON.stringify(data)
         });
 
-        const result = await response.json();
+        // Try to parse the response even if it's an error
+        let result;
+        try {
+            result = await response.json();
+            console.log('Backend response:', result);
+        } catch (e) {
+            console.error('Could not parse response as JSON');
+            result = { error: 'Unknown error occurred' };
+        }
 
         if (!response.ok) {
-            throw new Error(result.error || result.message || 'Failed to send message');
+            // Show detailed error message
+            const errorMsg = result.error || result.message || `Server error: ${response.status}`;
+            
+            // If there are validation errors, show them
+            if (result.errors) {
+                const fieldErrors = result.errors.map(err => `${err.field}: ${err.message}`).join(', ');
+                throw new Error(`${errorMsg} - ${fieldErrors}`);
+            } else {
+                throw new Error(errorMsg);
+            }
         }
         
         // Success
