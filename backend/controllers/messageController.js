@@ -31,10 +31,12 @@ exports.sendMessage = async (req, res) => {
         emailError = 'Email credentials missing';
       } else {
         // Create transporter with better configuration for Render
+// Create transporter with correct settings for port 2525
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
-  port: process.env.EMAIL_PORT || 465,
-  secure: true, // Changed to true for port 465
+  port: process.env.EMAIL_PORT || 2525,
+  secure: false,           // MUST be false for port 2525
+  requireTLS: true,        // This enables STARTTLS
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
@@ -43,7 +45,7 @@ const transporter = nodemailer.createTransport({
     rejectUnauthorized: false,
     ciphers: 'SSLv3'
   },
-  connectionTimeout: 30000, // 30 seconds
+  connectionTimeout: 30000,
   greetingTimeout: 30000,
   socketTimeout: 30000,
   debug: true,
