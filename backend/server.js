@@ -44,8 +44,7 @@ app.use(compression());
 // Enable CORS
 app.use(cors({
   origin: [
-    'https://yourdomain.com',
-    'https://www.yourdomain.com',
+    'https://portfolio-three-eta-41.vercel.app',
     process.env.CORS_ORIGIN
   ],
   credentials: true,
@@ -53,7 +52,7 @@ app.use(cors({
 }));
 
 // Logging
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'production') {
   app.use(morgan('dev'));
 } else {
   app.use(morgan('combined'));
