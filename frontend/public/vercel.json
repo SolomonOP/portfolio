@@ -2,26 +2,26 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/**",
+      "src": "frontend/public/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/css/(.*)",
-      "dest": "/frontend/css/$1"
+      "dest": "/frontend/public/css/$1"
     },
     {
       "src": "/js/(.*)",
-      "dest": "/frontend/js/$1"
+      "dest": "/frontend/public/js/$1"
     },
     {
       "src": "/assets/(.*)",
-      "dest": "/frontend/assets/$1"
+      "dest": "/frontend/public/assets/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/index.html"
+      "dest": "/frontend/public/index.html"
     }
   ]
 }
