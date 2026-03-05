@@ -58,7 +58,7 @@ const transporter = nodemailer.createTransport({
         
         // Prepare email content
         const mailOptions = {
-          from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+          from: `"Portfolio Contact" <solomonraja332@gmail.com>`,
           to: process.env.EMAIL_USER,
           replyTo: email,
           subject: `New Portfolio Contact: ${subject}`,
