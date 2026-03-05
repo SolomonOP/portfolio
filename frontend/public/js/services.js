@@ -34,17 +34,6 @@ const servicesData = [
             'Interactive animations',
             'Usability testing'
         ]
-    },
-    {
-        title: 'Custom Web Solutions',
-        description: 'From student management systems to automated tools — I build scalable solutions.',
-        icon: '🛠️',
-        features: [
-            'Requirement analysis',
-            'Custom architecture design',
-            'Scalable solutions',
-            'Maintenance & support'
-        ]
     }
 ];
 
