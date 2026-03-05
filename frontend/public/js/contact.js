@@ -105,7 +105,8 @@ function validateField(field) {
         isValid = emailRegex.test(value);
     } 
     else if (field.type === 'tel' && value) {
-        const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+        // FIXED: Simplified phone regex that works in all browsers
+        const phoneRegex = /^[0-9+\-\s\(\)]{10,20}$/;
         isValid = phoneRegex.test(value);
     } 
     else if (field.tagName === 'SELECT' && field.required) {
@@ -137,15 +138,14 @@ async function submitForm(form) {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
+    // Add budget if it exists (from radio buttons)
+    const budgetOption = form.querySelector('input[name="budget"]:checked');
+    if (budgetOption) {
+        data.budget = budgetOption.value;
+    }
+
     try {
-        // Simulate API call (replace with actual fetch when backend is ready)
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // For testing without backend - comment out when backend is ready
-        console.log('Form data:', data);
-        
-        // Uncomment when backend is ready
-        /*
+        // Make actual API call to your backend
         const response = await fetch(CONTACT_API_URL, {
             method: 'POST',
             headers: {
@@ -157,9 +157,8 @@ async function submitForm(form) {
         const result = await response.json();
 
         if (!response.ok) {
-            throw new Error(result.error || 'Failed to send message');
+            throw new Error(result.error || result.message || 'Failed to send message');
         }
-        */
         
         // Success
         showCleanNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
@@ -175,10 +174,13 @@ async function submitForm(form) {
         // Reset floating labels
         form.querySelectorAll('input, textarea, select').forEach(input => {
             const label = input.closest('.form-group')?.querySelector('label');
-            if (label && !input.value) {
+            if (label) {
                 label.classList.remove('float');
             }
         });
+        
+        // Log success for debugging
+        console.log('Form submitted successfully:', result);
         
     } catch (error) {
         console.error('Form submission error:', error);
@@ -216,7 +218,7 @@ function showCleanNotification(message, type = 'success') {
         notification.classList.add('show');
     }, 10);
 
-    // Auto-hide after 3 seconds
+    // Auto-hide after 5 seconds (increased from 3)
     setTimeout(() => {
         notification.classList.remove('show');
         setTimeout(() => {
@@ -224,7 +226,7 @@ function showCleanNotification(message, type = 'success') {
                 notification.remove();
             }
         }, 300);
-    }, 3000);
+    }, 5000);
 }
 
 // ===== FORM ANIMATIONS =====
