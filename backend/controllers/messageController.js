@@ -30,21 +30,25 @@ exports.sendMessage = async (req, res) => {
         console.warn('⚠️ Email credentials not configured. Skipping email notification.');
         emailError = 'Email credentials missing';
       } else {
-        // Create transporter with better configuration
-        const transporter = nodemailer.createTransport({
-          host: process.env.EMAIL_HOST,
-          port: process.env.EMAIL_PORT || 587,
-          secure: process.env.EMAIL_PORT === '465', // true for 465, false for other ports
-          auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-          },
-          tls: {
-            rejectUnauthorized: false // Helps with self-signed certificates
-          },
-          debug: true, // Enable debug logs
-          logger: true // Log to console
-        });
+        // Create transporter with better configuration for Render
+const transporter = nodemailer.createTransport({
+  host: process.env.EMAIL_HOST,
+  port: process.env.EMAIL_PORT || 465,
+  secure: true, // Changed to true for port 465
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  },
+  tls: {
+    rejectUnauthorized: false,
+    ciphers: 'SSLv3'
+  },
+  connectionTimeout: 30000, // 30 seconds
+  greetingTimeout: 30000,
+  socketTimeout: 30000,
+  debug: true,
+  logger: true
+});
 
         // Verify connection configuration
         await transporter.verify();
