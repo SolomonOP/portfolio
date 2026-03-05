@@ -2,7 +2,7 @@
 // No popups, no intrusive messages - just clean visual feedback
 
 // API Configuration
-const CONTACT_API_URL = 'http://localhost:5000/api/contact';
+const CONTACT_API_URL = 'https://portfolio-wcs5.onrender.com/api/contact';
 
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
