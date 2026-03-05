@@ -72,6 +72,96 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// DEBUG: Check email configuration
+app.get('/api/debug-email', async (req, res) => {
+  try {
+    const nodemailer = require('nodemailer');
+    
+    const config = {
+      host: process.env.EMAIL_HOST,
+      port: process.env.EMAIL_PORT,
+      user: process.env.EMAIL_USER,
+      hasPass: !!process.env.EMAIL_PASS,
+      passLength: process.env.EMAIL_PASS ? process.env.EMAIL_PASS.length : 0
+    };
+    
+    console.log('Email Config Check:', config);
+    
+    const transporter = nodemailer.createTransport({
+      host: process.env.EMAIL_HOST,
+      port: process.env.EMAIL_PORT || 587,
+      secure: false,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
+
+    await transporter.verify();
+    
+    res.json({ 
+      success: true, 
+      message: '✅ Email configuration is valid',
+      config
+    });
+  } catch (error) {
+    res.json({ 
+      success: false, 
+      message: '❌ Email configuration failed',
+      error: error.message,
+      config: {
+        host: process.env.EMAIL_HOST,
+        port: process.env.EMAIL_PORT,
+        user: process.env.EMAIL_USER,
+        hasPass: !!process.env.EMAIL_PASS,
+        passLength: process.env.EMAIL_PASS ? process.env.EMAIL_PASS.length : 0
+      }
+    });
+  }
+});
+
+// DEBUG: Send test email
+app.get('/api/send-test-email', async (req, res) => {
+  try {
+    const nodemailer = require('nodemailer');
+    
+    const transporter = nodemailer.createTransport({
+      host: process.env.EMAIL_HOST,
+      port: process.env.EMAIL_PORT || 587,
+      secure: false,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
+
+    const info = await transporter.sendMail({
+      from: `"Test" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
+      subject: 'Test Email from Portfolio',
+      text: 'If you receive this, email is working!'
+    });
+    
+    res.json({ 
+      success: true, 
+      message: 'Test email sent!',
+      messageId: info.messageId
+    });
+  } catch (error) {
+    res.json({ 
+      success: false, 
+      error: error.message,
+      stack: error.stack
+    });
+  }
+});
+
 // Error handler
 const errorHandler = require('./middleware/errorHandler');
 app.use(errorHandler);
