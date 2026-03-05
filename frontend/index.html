@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spidy | Portfolio</title>
+  
+  <!-- Meta Tags -->
+  <meta name="description" content="I'm Solomon Raja I, a creative full stack developer and web designer. I build visually stunning, high-performance websites that turn ideas into digital experiences.">
+  <meta name="keywords" content="Full Stack Developer, Web Designer, Creative Developer, MERN Stack, React, Node.js, Portfolio">
+  <meta name="author" content="Solomon Raja I">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Solomon Raja I - Creative Full Stack Developer">
+  <meta property="og:description" content="I design and build visually stunning, high-performance websites that turn ideas into digital experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spidy.dev">
+  <meta property="og:image" content="/assets/images/og-image.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solomon Raja I - Creative Full Stack Developer">
+  <meta name="twitter:description" content="I design and build visually stunning, high-performance websites that turn ideas into digital experiences.">
+  <meta name="twitter:image" content="/assets/images/twitter-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff2b2b'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Swiper Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/contact-fix.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loader-wrapper">
+    <div class="loader">
+      <div class="spider-loader">
+        <i class="fas fa-spider"></i>
+      </div>
+      <div class="loader-text">Swinging into action...</div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-text">&lt;Spidy /&gt;</span>
+        <span class="logo-full">Solomon Raja I</span>
+      </a>
+      
+      <div class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-primary btn-small">Hire Me <i class="fas fa-paper-plane"></i></a>
+        </div>
+      </div>
+      
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-particles" id="particles-js"></div>
+    
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+            <div class="hero-badge">
+              <span class="badge-text">Creative Developer</span>
+              <span class="badge-icon"><i class="fas fa-bolt"></i></span>
+            </div>
+            
+            <h1 class="hero-title">
+              <span class="title-line">Solomon Raja I</span>
+              <span class="title-line title-gradient">Creative Full Stack</span>
+              <span class="title-line title-gradient">Developer & Web Designer</span>
+            </h1>
+            
+            <p class="hero-description">
+              I design and build visually stunning, high-performance websites that turn ideas into digital experiences. Helping startups, creators, and businesses build modern, conversion-focused web applications.
+            </p>
+            
+            <div class="hero-cta">
+              <a href="#work" class="btn btn-primary btn-large">
+                <span>View My Work</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-outline btn-large">
+                <span>Hire Me</span>
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+            
+            <div class="hero-social">
+              <a href="#" target="_blank" class="social-icon" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" target="_blank" class="social-icon" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" target="_blank" class="social-icon" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" target="_blank" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
+            <div class="hero-image-wrapper">
+              <div class="hero-image-glow"></div>
+              <div class="hero-image-container">
+                <div class="spider-web-bg"></div>
+                <div class="hero-avatar">
+                  <i class="fas fa-spider"></i>
+                </div>
+              </div>
+              
+              <div class="floating-card card-1">
+                <i class="fas fa-code"></i>
+                <span>React</span>
+              </div>
+              <div class="floating-card card-2">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="floating-card card-3">
+                <i class="fas fa-paint-brush"></i>
+                <span>Design</span>
+              </div>
+              <div class="floating-card card-4">
+                <i class="fas fa-gamepad"></i>
+                <span>Unity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-scroll">
+      <a href="#about" class="scroll-link">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">// Get to know me</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-content" data-aos="fade-right">
+          <p class="about-text-large">
+            I'm Solomon Raja I, a creative web designer and full stack developer passionate about building modern, user-centric digital experiences.
+          </p>
+          
+          <p class="about-text">
+            I specialize in designing clean, interactive, and performance-optimized websites that not only look stunning but also deliver real business results. From frontend animations to backend logic, I enjoy transforming complex ideas into simple, scalable solutions.
+          </p>
+          
+          <div class="about-focus">
+            <h3>As a freelancer, I focus on:</h3>
+            <ul class="focus-list">
+              <li><i class="fas fa-check-circle"></i> Creative UI/UX design</li>
+              <li><i class="fas fa-check-circle"></i> Responsive web development</li>
+              <li><i class="fas fa-check-circle"></i> Full stack application development</li>
+              <li><i class="fas fa-check-circle"></i> Custom web designs</li>
+            </ul>
+          </div>
+          
+          <p class="about-text">
+            My goal is simple — build websites that impress users and convert visitors into customers.
+          </p>
+          
+          <!-- <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-count="2">0</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="10">0</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="3">0</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div> -->
+        </div>
+        
+        <div class="about-visual" data-aos="fade-left">
+          <div class="about-card">
+            <div class="about-card-inner">
+              <div class="about-card-front">
+                <i class="fas fa-code"></i>
+                <h3>Creative Developer</h3>
+                <p>Building digital experiences</p>
+              </div>
+              <div class="about-card-back">
+                <i class="fas fa-rocket"></i>
+                <h3>Problem Solver</h3>
+                <p>Turning ideas into reality</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- <div class="experience-badge">
+            <div class="exp-years">2+</div>
+            <div class="exp-text">Years of <br>Creative Excellence</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">// What I Offer</span>
+        <h2 class="section-title">My Services</h2>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="services-grid" id="services-container">
+        <!-- Services loaded dynamically -->
+      </div>
+      
+      <div class="services-cta" data-aos="fade-up">
+        <p>Need a custom solution? Let's discuss your project.</p>
+        <a href="#contact" class="btn btn-primary">Start a Conversation <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">// My Expertise</span>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="skills-wrapper">
+        <div class="skills-category" data-aos="fade-up">
+          <h3><i class="fas fa-code"></i> Frontend</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <span class="skill-name">HTML5</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">CSS3</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">React.js</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Tailwind CSS</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <span class="skill-name">Node.js</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Express.js</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Python (Flask)</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+          <h3><i class="fas fa-database"></i> Database</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <span class="skill-name">MySQL</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">MongoDB</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+          <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Render</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Unity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="work" class="work">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">// My Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="project-filters" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="game">Game Dev</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+      
+      <div class="projects-grid" id="projects-container">
+        <!-- Projects loaded dynamically -->
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+          <p>Loading amazing projects...</p>
+        </div>
+      </div>
+      
+      <div class="work-cta" data-aos="fade-up">
+        <a href="#" class="btn btn-outline">View All Projects <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Me Section -->
+  <section id="why-me" class="why-me">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">// Why Work With Me</span>
+        <h2 class="section-title">Why Choose Me</h2>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up">
+          <div class="feature-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3>Clean & Modern Design</h3>
+          <p>I create visually appealing designs that follow the latest trends while maintaining timeless elegance.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Fast Loading Websites</h3>
+          <p>Performance optimized code ensures your website loads quickly, improving user experience and SEO.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Fully Responsive</h3>
+          <p>Perfect viewing experience across all devices - from mobile phones to large desktop screens.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>Scalable Backend</h3>
+          <p>Robust architecture that grows with your business, handling increased traffic and data seamlessly.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Client-Focused Communication</h3>
+          <p>Regular updates and transparent communication throughout the development process.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>On-Time Delivery</h3>
+          <p>I respect deadlines and deliver quality work within the agreed timeframe, every time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Process Section -->
+  <section id="process" class="process">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">// How I Work</span>
+        <h2 class="section-title">My Work Process</h2>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="process-timeline">
+        <div class="process-step" data-aos="fade-up">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Understanding Your Idea</h3>
+            <p>We discuss your vision, goals, and requirements in detail. I ask the right questions to understand your target audience and project objectives.</p>
+            <div class="step-icon"><i class="fas fa-brain"></i></div>
+          </div>
+        </div>
+        
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Wireframing & Design</h3>
+            <p>I create wireframes and visual designs that align with your brand identity. You get to see and approve the design before development begins.</p>
+            <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
+          </div>
+        </div>
+        
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Development</h3>
+            <p>I bring the design to life with clean, efficient code. Regular updates keep you informed of progress throughout the development phase.</p>
+            <div class="step-icon"><i class="fas fa-code"></i></div>
+          </div>
+        </div>
+        
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Testing & Optimization</h3>
+            <p>Rigorous testing across devices and browsers. Performance optimization ensures fast loading times and smooth user experience.</p>
+            <div class="step-icon"><i class="fas fa-vial"></i></div>
+          </div>
+        </div>
+        
+        <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <h3>Deployment & Support</h3>
+            <p>I handle the deployment process and provide ongoing support. Your website goes live with confidence and peace of mind.</p>
+            <div class="step-icon"><i class="fas fa-rocket"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">// Client Feedback</span>
+        <h2 class="section-title">Testimonials</h2>
+        <div class="section-line"></div>
+      </div>
+      
+      <div class="testimonials-slider swiper" data-aos="fade-up">
+        <div class="swiper-wrapper" id="testimonials-container">
+          <!-- Testimonials loaded dynamically -->
+        </div>
+        
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="cta">
+    <div class="container">
+      <div class="cta-content" data-aos="zoom-in">
+        <h2 class="cta-title">Let's Build Something Amazing Together</h2>
+        <p class="cta-text">Have a project in mind? Let's turn your idea into a powerful digital experience that stands out.</p>
+        <a href="#contact" class="btn btn-primary btn-large">
+          <span>Hire Me Now</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">// GET IN TOUCH</span>
+            <h2 class="section-title">Contact Me</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info" data-aos="fade-right">
+                <h3>Let's Work Together</h3>
+                <p>Have a project in mind or want to discuss potential collaboration? I'm always excited to hear about new ideas and opportunities.</p>
+                
+                <div class="info-items">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Tamil Nadu, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <a href="mailto:yourmail@gmail.com">solomonraja332@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <a href="tel:+911234567890">+91 97875 30824</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form - CLEAN VERSION -->
+            <div class="contact-form-wrapper" data-aos="fade-left">
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <!-- Name Field -->
+                        <div class="form-group float-label">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                            <span class="error-indicator"></span>
+                            <span class="valid-indicator"><i class="fas fa-check"></i></span>
+                        </div>
+                        
+                        <!-- Email Field -->
+                        <div class="form-group float-label">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                            <span class="error-indicator"></span>
+                            <span class="valid-indicator"><i class="fas fa-check"></i></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <!-- Phone Field -->
+                        <div class="form-group float-label">
+                            <input type="tel" id="phone" name="phone" placeholder=" " pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
+                            <label for="phone">Phone Number</label>
+                            <span class="error-indicator"></span>
+                            <span class="valid-indicator"><i class="fas fa-check"></i></span>
+                        </div>
+                        
+                        <!-- Project Type - Enhanced Dropdown -->
+                        <div class="form-group float-label">
+                            <select id="project-type" name="projectType" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="web">🌐 Web Development</option>
+                                <option value="design">🎨 UI/UX Design</option>
+                                <option value="fullstack">⚡ Full Stack Application</option>
+                                <option value="game">🎮 Game Development</option>
+                                <option value="other">✨ Other</option>
+                            </select>
+                            <label for="project-type">Project Type</label>
+                            <span class="error-indicator"></span>
+                            <span class="valid-indicator"><i class="fas fa-check"></i></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Subject Field -->
+                    <div class="form-group float-label">
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
+                        <label for="subject">Subject</label>
+                        <span class="error-indicator"></span>
+                        <span class="valid-indicator"><i class="fas fa-check"></i></span>
+                    </div>
+                    
+                    <!-- Message Field -->
+                    <div class="form-group float-label">
+                        <textarea id="message" name="message" rows="5" placeholder=" " required maxlength="1000"></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="error-indicator"></span>
+                        <span class="valid-indicator"><i class="fas fa-check"></i></span>
+                        <span class="char-counter">0/1000</span>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-block">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">&lt;Spidy /&gt;</a>
+          <p>Creative Full Stack Developer & Web Designer crafting exceptional digital experiences.</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#work">Work</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Full Stack</a></li>
+              <li><a href="#services">Web Development</a></li>
+              <li><a href="#services">UI/UX Design</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Solomon Raja I. Built with creativity and clean code.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
